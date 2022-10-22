@@ -4,4 +4,5 @@ pygame==2.1.2
 pykeyboard==0.1.5
 
 # https://github.com/tensorflow/tensorflow/issues/58264
-tflite-runtime==2.10.0
+# tflite-runtime==2.10.0
+tensorflow==2.10.0

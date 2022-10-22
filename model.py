@@ -23,7 +23,9 @@ import audio_recorder
 import mel_features
 import numpy as np
 import queue
-import tflite_runtime.interpreter as tflite
+# import tflite_runtime.interpreter as tflite
+import tensorflow as tf
+import tensorflow.lite as tflite
 import platform
 
 EDGETPU_SHARED_LIB = {
@@ -205,11 +207,7 @@ def set_input(interpreter, data):
 def make_interpreter(model_file):
     model_file, *device = model_file.split('@')
     return tflite.Interpreter(
-      model_path=model_file,
-      experimental_delegates=[
-          tflite.load_delegate(EDGETPU_SHARED_LIB,
-                               {'device': device[0]} if device else {})
-      ])
+      model_path=model_file)
 
 
 def add_model_flags(parser):
