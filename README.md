@@ -31,7 +31,7 @@ Make sure you've got your Edge TPU device is correctly configured. If you encoun
 
 To install all the requirements, simply run.
 ```
-sh install_requirements.sh
+pip install -r requirements.txt
 ```
 On both the Coral DevBoard and USB Accelerator the model can be tested by executing:
 ```
