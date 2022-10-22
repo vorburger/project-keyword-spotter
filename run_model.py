@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Copyright 2019 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +15,7 @@
 
 """Runs a model on the edgetpu.
 
-Useage:
+Usage:
 python3 run_model.py --model_file model_edgetpu.tflite
 """
 from __future__ import absolute_import
